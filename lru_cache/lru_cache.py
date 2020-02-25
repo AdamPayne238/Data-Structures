@@ -1,3 +1,14 @@
+from doubly_linked_list import DoublyLinkedList
+
+# A Least Recently Used (LRU) Cache organizes items in order of use, allowing you to quickly identify which
+#   item hasn't been used for the longest amount of time.
+#
+# Picture a clothes rack, where clothes are always hung up on one side. To find the least-recently used item,
+#   look at the item on the other end of the rack.
+#
+# Under the hood, an LRU cache is often implemented by pairing a doubly linked list with a hash map.
+
+
 class LRUCache:
     """
     Our LRUCache class keeps track of the max number of nodes it
@@ -7,7 +18,9 @@ class LRUCache:
     to every node stored in the cache.
     """
     def __init__(self, limit=10):
-        pass
+        self.storage = DoublyLinkedList
+        self.limit = limit  # maybe remove this
+        self.current_size = 0
 
     """
     Retrieves the value associated with the given key. Also
@@ -18,6 +31,7 @@ class LRUCache:
     """
     def get(self, key):
         pass
+
 
     """
     Adds the given key-value pair to the cache. The newly-
