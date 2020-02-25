@@ -15,13 +15,18 @@ class Stack:
 
     # Push - add an element to the top of the stack
     def push(self, value):
+        # Tail is top because the last item stacked is on top
         self.storage.add_to_tail(value)
         self.size += 1
 
     # Pop  - removes the element at the top of the stack
     def pop(self):
-        pass
-    # remove_from_head?
+        # remove_from_tail (last item in stack is on top (last-in-first-out))
+        if self.size > 0:
+            self.size -= 1
+            return self.storage.remove_from_tail()
+        else:
+            return None
 
     def len(self):
         return self.size

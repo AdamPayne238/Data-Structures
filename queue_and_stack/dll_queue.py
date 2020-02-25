@@ -14,13 +14,18 @@ class Queue:
 
     # enqueue - adds an element to the end of the queue
     def enqueue(self, value):
+        # and of queue is tail same as end of line
         self.storage.add_to_tail(value)
         self.size += 1
 
     # dequeue - removes the element at the beginning of the queue
     def dequeue(self):
-        # remove_from_head
-        pass
+        # remove_from_head - head is the beginning of the queue
+        if self.size > 0:
+            self.size -= 1
+            return self.storage.remove_from_head()
+        else:
+            return None
 
     def len(self):
         return self.size
