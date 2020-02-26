@@ -34,21 +34,23 @@ class BinarySearchTree:
         self.left = None
         self.right = None
 
-    # Insert the given value into the tree
+    # 1. Insert the given value into the tree
+    # insert adds the input value to the binary search tree, adhering to the rules of the
+    # ordering of elements in a binary search tree.
     def insert(self, value):
         pass
 
-    # Return True if the tree contains the value
-    # False if it does not
+    # 2. Return True if the tree contains the value. False if it does not
     def contains(self, target):
         pass
 
-    # Return the maximum value found in the tree
+    # 3. Return the maximum value found in the tree
     def get_max(self):
         pass
 
-    # Call the function `cb` on the value of each node
-    # You may use a recursive or iterative approach
+    # 4. Call the function `cb` on the value of each node. You may use a recursive or iterative approach
+    # for_each performs a traversal of every node in the tree, executing the passed-in callback function on each
+    # tree node value. There is a myriad of ways to perform tree traversal; in this case any of them should work.
     def for_each(self, cb):
         pass
 
